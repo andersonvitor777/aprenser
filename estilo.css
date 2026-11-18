@@ -1,0 +1,288 @@
+:root{
+    --primary-color: #fed001;
+    --dark-color: #1f1f1f;
+    --blue-color: #073b6b;
+    --light-color: #f7f7f7;
+    --text-color: #222222;
+    --gray-color: #555555;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font: 400 62.5% "Inter", Sans-serif;
+    scroll-behavior: smooth;
+}
+
+body{
+    color: var(--text-color);
+    background-color: #ffffff;
+}
+
+img{
+    max-width: 100%;
+    display: block;
+}
+
+p, a{
+    font-size: 1.6rem;
+}
+
+h1{
+    font-size: 4.8rem;
+}
+
+h2{
+    font-size: 4rem;
+}
+
+h3{
+    font-size: 3.2rem;
+}
+
+.container{
+    width: min(110rem, 90%);
+    margin-inline: auto;
+}
+
+.WrapperContainer-dark{
+    background-color: var(--dark-color);
+    color: #ffffff;
+}
+
+.WrapperContainer-light{
+    background-color: var(--light-color);
+}
+
+.WrapperContainer-dark2{
+    background-color: var(--blue-color);
+    color: #ffffff;
+}
+
+.wrapperContainer-hero{
+    background: linear-gradient(to bottom, #fff8b5, var(--primary-color));
+}
+
+/* HEADER */
+
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem 0;
+}
+
+.header img{
+    width: 15rem;
+}
+
+.header_nav ul{
+    display: flex;
+    gap: 1.2rem;
+    list-style: none;
+}
+
+.header_nav a{
+    color: var(--primary-color);
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    font-weight: 700;
+    letter-spacing: 0.05rem;
+    border: 0.1rem solid var(--primary-color);
+    padding: 0.8rem 1.6rem;
+    transition: 0.3s;
+}
+
+.header_nav a:hover{
+    background-color: var(--primary-color);
+    color: var(--dark-color);
+}
+
+/* HERO */
+
+.heroBanner{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 4rem;
+    padding-top: 5rem;
+}
+
+.heroBanner_content{
+    max-width: 52rem;
+}
+
+.heroBanner h1{
+    line-height: 1.08;
+    font-weight: 800;
+    margin-bottom: 2.8rem;
+}
+
+.heroBanner img{
+    width: 43rem;
+}
+
+.btn{
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: #111111;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.4rem;
+    padding: 1.2rem 2.8rem;
+    border-radius: 0.3rem;
+    transition: 0.3s;
+}
+
+.btn:hover{
+    filter: brightness(0.95);
+}
+
+/* CURSOS */
+
+.cursos{
+    padding: 7rem 0;
+    text-align: center;
+}
+
+.cursos h2,
+.contatos h2{
+    margin-bottom: 4rem;
+}
+
+.cursosContainer{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.4rem;
+    text-align: left;
+    margin-bottom: 4rem;
+}
+
+.curso_card{
+    background-color: #ffffff;
+    box-shadow: 0 0.2rem 1rem rgba(0, 0, 0, 0.08);
+}
+
+.curso_card img{
+    width: 100%;
+    height: 18rem;
+    object-fit: cover;
+}
+
+.cursos_card_content{
+    padding: 2rem;
+}
+
+.cursos_card_content h3{
+    font-size: 1.8rem;
+    margin-bottom: 1.2rem;
+}
+
+.cursos_card_content p{
+    font-size: 1.4rem;
+    line-height: 1.65;
+    color: var(--gray-color);
+}
+
+.section_btn{
+    margin-inline: auto;
+}
+
+/* NOSSA ESCOLA */
+
+.escola{
+    display: flex;
+    align-items: center;
+    gap: 6rem;
+    padding: 7rem 0;
+}
+
+.escola img{
+    width: 36rem;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.escola_content h2{
+    margin-bottom: 2.4rem;
+}
+
+.escola_content p{
+    font-size: 1.5rem;
+    line-height: 1.75;
+    color: #dbeaff;
+    max-width: 56rem;
+}
+
+/* CONTATOS */
+
+.contatos{
+    padding: 7rem 0;
+    text-align: center;
+}
+
+.contatos iframe{
+    width: 100%;
+    height: 35rem;
+    margin-bottom: 2.8rem;
+}
+
+.contatos address{
+    font-style: normal;
+    text-align: right;
+    font-size: 1.4rem;
+    line-height: 1.7;
+}
+
+/* FOOTER */
+
+.footer{
+    text-align: center;
+    padding: 2.2rem 0;
+}
+
+.footer p{
+    font-size: 1.4rem;
+}
+
+/* RESPONSIVO */
+
+@media (max-width: 768px){
+    .header,
+    .heroBanner,
+    .escola{
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .header_nav ul{
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 1.6rem;
+    }
+
+    .heroBanner h1{
+        font-size: 3.8rem;
+    }
+
+    .heroBanner img{
+        width: 32rem;
+    }
+
+    .cursosContainer{
+        grid-template-columns: 1fr;
+    }
+
+    .escola img{
+        width: 28rem;
+    }
+
+    .contatos address{
+        text-align: center;
+    }
+}
